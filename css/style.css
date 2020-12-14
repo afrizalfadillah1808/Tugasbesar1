@@ -1,0 +1,295 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Product-san';
+    src: url('assets/fonts/Product_Sans_Regular.ttf');
+}
+
+header {
+    background-image: url("../assets/img/hero.png");
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 9999;
+}
+
+header h1 {
+    display: inline-block;
+    float: left;
+    padding: 16px 24px;
+    text-transform: uppercase;
+}
+
+header h1 a {
+    transition: .3s;
+    color: #333;
+}
+
+header h1 a:hover {
+    color: salmon;
+}
+
+header ul {
+    float: right;
+}
+
+header ul li {
+    padding: 24px;
+    display: inline-block;
+}
+
+header ul li a {
+    transition: .3s;
+    color: #333;
+}
+
+header ul li a:hover {
+    color: salmon;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.container::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.mobile-menu {
+    float: right;
+    display: none;
+    padding: 19px;
+}
+
+.mobile-menu:hover {
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -300px;
+    width: 300px;
+    background-color: rgb(230, 230, 230,.9);
+    transition: .3s;
+    margin-top: 52px;
+    z-index: 9999;
+}
+
+.sidebar ul li a {
+    color: #333;
+}
+
+.sidebar ul li {
+    padding: 24px;
+    transition: .3s;
+    transition-property: background-color;
+}
+
+.sidebar ul li:hover {
+    background-color: #fff;
+}
+
+#check:checked ~ .sidebar {
+    left: 0;
+}
+
+#home {
+    background-color: white;
+    padding: 150px 0;
+    text-align: center;
+    background-image: url("../assets/img/andre.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+section {
+    padding: 45px 0;
+}
+
+.home img {
+    width: 20%;
+    border-radius: 200px;
+    box-shadow: 0 3px 5px #ddd;
+    margin-bottom: 10px;
+    background-color: #ddd;
+}
+
+.home h2, .home p {
+    color: white;
+    text-shadow: 1px 1px 0 rgb(92, 88, 88);
+}
+
+.home h2 {
+    margin-bottom: 10px;
+}
+
+.home p {
+    font-size: 18px;
+}
+
+section h3 {
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 20px;
+    position: relative;
+}
+
+section h3::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    height: 1px;
+    background-color: #ddd;
+    left: calc(50% - 60px);
+}
+
+section h3::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    width: 40px;
+    height: 4px;
+    background-color: salmon;
+    left: calc(50% - 20px);
+}
+
+#about p {
+    text-align: justify;
+    text-indent: 40px;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+
+#about {
+    color: #333;
+}
+
+#skills {
+    background-color: #e6e6e6;
+}
+
+#skills .bar {
+    height: 30px;
+    background-color: white;
+    border: 1px solid;
+    margin: 5px 0 20px 0;
+}
+
+.bar .nilai {
+    height: 30px;
+    background-color: #696969;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+}
+.html {
+    width: 100%;
+}
+.css {
+    width: 90%;
+}
+.js {
+    width: 50%;
+}
+.ps {
+    width: 85%;
+}
+
+.col-4 {
+	width:25%;
+	box-sizing: border-box;
+    padding:5px;
+    float: left;
+	text-align: center;
+    margin-bottom: 15px;
+}
+.col-4 img {
+    width:100%;
+    border-radius: 10px;
+}
+.col-4 a:hover img {
+	transform: scale(1.2);
+}
+
+.kotak {
+    float: left;
+    clear: left;
+    border-radius: 10px;
+}
+
+.col-3 {
+	width:33.33%;
+	box-sizing: border-box;
+	float: left;
+	text-align: center;
+	padding:50px 10px;
+}
+.col-3 img {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #333;
+	margin-bottom: 15px;
+}
+
+#contact {
+    background-color: #ddd;
+}
+
+.footer {
+	background-image: url("../assets/img/hero.png");
+	padding:50px;
+    text-align: center;
+    font-weight: var(--font-semi);
+    padding: 2rem 0;
+}
+.footer_tittle {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.footer_social {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media (max-width: 768px){
+    .mobile-menu {
+        display: block;
+    }
+    header ul {
+        display: none;
+    }
+    .col-4 {
+        width: 50%;
+    }
+    .kotak {
+        clear: left;
+        float: left;
+    }
+    .col-3 {
+        width: 100%;
+    }
+}
